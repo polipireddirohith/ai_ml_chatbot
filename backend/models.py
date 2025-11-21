@@ -1,7 +1,8 @@
 from sqlalchemy import Column, Integer, String, Float, Text
-from .database import Base
+import database
 
-class ChatLog(Base):
+
+class ChatLog(database.Base):
     __tablename__ = "chat_logs"
 
     id = Column(Integer, primary_key=True, index=True)

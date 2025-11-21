@@ -5,7 +5,10 @@ from sqlalchemy.orm import Session
 import time
 import random
 
-from . import models, database, ml_models
+# Use absolute imports instead of relative imports for deployment
+import models
+import database
+import ml_models
 
 # Initialize Database
 models.Base.metadata.create_all(bind=database.engine)
