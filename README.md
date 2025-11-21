@@ -1,35 +1,57 @@
-# NeuroChat - AI/ML Chatbot Interface
+# AI/ML Chatbot Interface
 
-This is a modern, premium chat interface for an AI/ML Chatbot project.
-It is built with **Vite + React** and uses **Vanilla CSS** for styling to achieve a custom, high-performance look.
+A premium, dark-themed web interface for an AI/ML Chatbot that supports multiple algorithm modes (CNN, RNN, Transformers, etc.).
 
 ## Features
 
-- **Premium Dark Theme**: Deep space colors with glassmorphism effects.
-- **Dynamic Interface**: Smooth animations for messages and sidebar.
-- **Model Selection**: Sidebar menu to switch between different AI/ML modes (CNN, RNN, Transformer, etc.).
-- **Responsive Design**: Adapts to different screen sizes (basic implementation).
+-   **Modern UI**: Glassmorphism, gradients, and smooth animations.
+-   **Multiple Modes**: Switch between different AI models.
+-   **Responsive Design**: Works on desktop and mobile.
+-   **Real Backend**: Powered by Python (FastAPI) and PyTorch.
+-   **Generative AI**: Integrated with DistilGPT-2 for real text generation.
+-   **RAG System**: Retrieval-Augmented Generation for knowledge retrieval.
 
-## Project Structure
+## Tech Stack
 
-- `src/components/ChatInterface.jsx`: The main chat component containing the logic and layout.
-- `src/components/ChatInterface.css`: Custom styles for the chat interface.
-- `src/index.css`: Global design system (variables, typography, reset).
+-   **Frontend**: React + Vite
+-   **Backend**: FastAPI + Python
+-   **ML Libraries**: PyTorch, Scikit-learn, Transformers
+-   **Database**: SQLite (via SQLAlchemy)
 
-## Running the Project
+## Getting Started
 
-1.  Install dependencies (if not already done):
+### Prerequisites
+
+-   Node.js (v16+)
+-   Python (v3.9+)
+
+### Installation
+
+1.  **Clone the repository**:
     ```bash
-    npm install
+    git clone https://github.com/polipireddirohith/ai_ml_chatbot.git
+    cd ai_ml_chatbot
     ```
-2.  Start the development server:
-    ```bash
-    npm run dev
-    ```
-3.  Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## Next Steps
+2.  **Install Dependencies & Run**:
+    *   **Windows**: Double-click `run_backend.bat` (starts both backend and frontend).
+    *   **Manual**:
+        ```bash
+        # Backend
+        cd backend
+        pip install -r requirements.txt
+        uvicorn main:app --reload
 
-- Connect the frontend to a backend API (Python/Flask/FastAPI) to handle actual model inference.
-- Implement state management for chat history persistence.
-- Add more interactive visualizations for the specific AI models (e.g., showing a CNN architecture diagram).
+        # Frontend
+        cd ..
+        npm install
+        npm run dev
+        ```
+
+## Deployment
+
+See [DEPLOYMENT.md](DEPLOYMENT.md) for detailed instructions.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
